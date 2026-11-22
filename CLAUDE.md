@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## About This Repository
 
-A minimal Kotlin library and CLI starter template for the JVM. Its only application code is a placeholder Fibonacci implementation in `src/main/kotlin/` — real logic is added by projects derived from it.
+A minimal Android app starter template built with Jetpack Compose. It's at an early stage: no Android app exists yet, and the only code is the placeholder Fibonacci library and CLI in `src/main/kotlin/`, carried over from `kotlin-starter` until a Compose app module replaces them.
 
 ## Gotchas
 
