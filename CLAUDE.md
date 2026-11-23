@@ -6,12 +6,11 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## About This Repository
 
-A minimal Android app starter template built with Jetpack Compose. It's at an early stage: no Android app exists yet, and the only code is the placeholder Fibonacci library and CLI in `src/main/kotlin/`, carried over from `kotlin-starter` until a Compose app module replaces them.
+A minimal Android app starter template built with Jetpack Compose, in a single `app/` module. Its only application code is a placeholder click counter screen in `app/src/main/kotlin/` — real screens are added by projects derived from it.
 
 ## Gotchas
 
 - `lefthook run pre-commit` skips every job when nothing is staged, even ones that ignore the staged file list — pass `--all-files` to run it outside an actual commit.
 - The pre-commit hook fixes files in place, and the run fails if any file changes. Report that failure and leave the fixes for the user to review and re-stage before committing again.
-- `./gradlew test` doesn't check coverage — only `./gradlew build` (through `koverVerify`) applies the 100% threshold.
-- After changing a dependency, regenerate `gradle.lockfile` with `./gradlew dependencies --write-locks` — until then, the build either fails or silently keeps the locked version.
+- After changing a dependency, regenerate `app/gradle.lockfile` with `./gradlew :app:dependencies --write-locks` — until then, the build either fails or silently keeps the locked version.
 - `.gitignore` ignores every dotfile and dotdir (`.*`) — a new one needs an explicit `!` exception there or it silently won't be tracked.
