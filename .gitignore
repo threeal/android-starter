@@ -5,3 +5,4 @@
 !.sdkmanrc
 
 build/
+local.properties
